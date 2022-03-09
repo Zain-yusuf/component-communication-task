@@ -5,11 +5,10 @@
       <h1>{{name}}</h1>
       <input type="text" placeholder="your email" v-model="email"> <br><br>
          <input type="text" placeholder="your password"  v-model="name"><br><br>
-      <button v-on:click="getData(zain)" type="button">click me</button> <br><br>
+      <button v-on:click="getData()" type="button">click me</button> <br><br>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'HelloWorld',
@@ -24,7 +23,7 @@ export default {
   },
   methods:{
     getData(){
-      console.warn("value : ",this.email,this.password)
+      console.warn("value : ",this.email,this.password);
     }
   }
 }
