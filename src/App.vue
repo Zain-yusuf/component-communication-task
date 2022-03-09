@@ -1,17 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>{{name}}</h1>
+    <HelloWorld v-bind:msg="name"/>
+
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
-export default {
+export default { 
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      name: "zain"
+    }
   }
 }
 </script>
